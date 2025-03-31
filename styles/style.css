@@ -1,4 +1,4 @@
-:root { 
+:root {
     --primary-color: #70060e;
     --background-color: #020433;
     --text-color: white;
@@ -12,7 +12,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -20,27 +19,22 @@ header {
     padding: 15px 30px;
     background-color: var(--primary-color);
 }
-
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
-
 .nav-links {
     display: flex;
     gap: 20px;
     list-style: none;
 }
-
 .nav-links a {
     color: var(--text-color);
     text-decoration: none;
 }
-
 .hamburger {
     display: none;
 }
-
 section {
     padding: 50px 20px;
     text-align: center;
@@ -48,28 +42,23 @@ section {
     transform: translateY(50px);
     transition: all 0.6s ease-out;
 }
-
 section.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
 .profile-pic {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
-
 .social-icons img {
     width: 32px;
     height: 32px;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
-
 .social-icons img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
-
 form {
     display: flex;
     flex-direction: column;
@@ -77,17 +66,14 @@ form {
     max-width: 400px;
     margin: 0 auto;
 }
-
 input, textarea, button {
     padding: 10px;
 }
-
 button {
     background-color: var(--primary-color);
     color: var(--text-color);
     cursor: pointer;
 }
-
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -101,4 +87,52 @@ button {
     .hamburger {
         display: block;
     }
+}
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+.image-gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+.skills-chart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.skill {
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.skill:hover {
+    background-color: #555;
+}
+.workshop {
+    position: relative;
+    perspective: 1000px;
+}
+.workshop:hover .workshop-content {
+    transform: rotateY(180deg);
+}
+.workshop-content {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.workshop-front, .workshop-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.workshop-back {
+    transform: rotateY(180deg);
+    background-color: #333;
+    padding: 20px;
 }
