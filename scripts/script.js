@@ -15,7 +15,6 @@ const revealOnScroll = () => {
     });
 };
 
-// Debouncing function to improve scroll performance
 function debounce(func, wait = 20, immediate = true) {
     let timeout;
     return function() {
@@ -31,9 +30,25 @@ function debounce(func, wait = 20, immediate = true) {
     };
 }
 
-window.addEventListener('scroll', debounce(revealOnScroll)); // Using debouncing
+window.addEventListener('scroll', debounce(revealOnScroll));
 revealOnScroll();
 
 document.querySelector('.hamburger').onclick = () => {
     document.querySelector('.nav-links').classList.toggle('active');
 };
+
+// Skills Chart Interaction
+document.querySelectorAll('.skill').forEach(skill => {
+    skill.addEventListener('mouseover', () => {
+        const skillName = skill.getAttribute('data-skill');
+        alert(`Information about ${skillName} skill goes here!`); // Replace with actual information display
+    });
+});
+
+// Portfolio Modal (Example)
+document.querySelectorAll('.project').forEach(project => {
+    project.addEventListener('click', () => {
+        const projectName = project.getAttribute('data-project');
+        alert(`More details about ${projectName} project!`); // Replace with a modal display
+    });
+});
