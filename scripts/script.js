@@ -1,27 +1,217 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const targetSection = document.querySelector(this.getAttribute('href'));
-    targetSection.scrollIntoView({ behavior: 'smooth' });
-  });
-});
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-// Reveal sections on scroll
-const sections = document.querySelectorAll('section.card');
-const revealOnScroll = () => {
-  const triggerPoint = window.innerHeight * 0.85;
-  sections.forEach(section => {
-    if (section.getBoundingClientRect().top < triggerPoint) {
-      section.classList.add('visible');
-    }
-  });
-};
+body {
+  background-color: #2a2a2a; /* Lighter dark background for better icon contrast */
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #03174d; /* New header color */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-// Toggle mobile (hamburger) navigation
-document.querySelector('.hamburger').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
-});
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+nav {
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Card-Style Sections */
+.card {
+  background: #242424;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Home Section */
+.home-content {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: block;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Section Titles */
+section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Generic Content Containers */
+.about-container,
+.workshop,
+.project,
+.cv-container {
+  margin: 15px 0;
+  padding: 15px;
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+.cv-container .cv-section {
+  margin-bottom: 20px;
+}
+
+.cv-container .cv-section h3 {
+  margin-bottom: 10px;
+}
+
+/* CV Download Button */
+.cv-download {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cv-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #03174d;
+  color: #f0f0f0;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: #1a2e5a;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #03174d;
+  color: #f0f0f0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a2e5a;
+}
+
+/* Footer */
+footer {
+  background: #03174d;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Responsive Navigation for Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #03174d;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    display: none;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+    color: #f0f0f0;
+  }
+}
