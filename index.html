@@ -1,140 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Profile - Theodora Stavrou</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script defer src="scripts/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E‑Profile - Theodora Stavrou</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+  <script defer src="scripts/script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">E-Profile</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#workshops">Workshops</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">&#9776;</div>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">E‑Profile</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#workshops">Workshops</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">&#9776;</div>
+    </nav>
+  </header>
 
-    <main>
-        <section id="home" class="hero">
-            <img src="images/profile.png" alt="Theodora Stavrou's Profile Picture" class="profile-pic">
-            <h1>Theodora Stavrou</h1>
-            <div class="social-icons">
-                <a href="https://github.com/blvd6" target="_blank"><img src="images/github.svg" alt="GitHub Icon"></a>
-                <a href="https://www.linkedin.com/in/theodora-stavrou" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Icon"></a>
-            </div>
-        </section>
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="card">
+      <div class="home-content">
+        <img src="images/profile.png" alt="Profile Picture" class="profile-pic">
+        <h1>Theodora Stavrou</h1>
+        <div class="social-icons">
+          <a href="https://github.com/blvd6" target="_blank">
+            <img src="images/github.svg" alt="GitHub">
+          </a>
+          <a href="https://www.linkedin.com/in/theodora-stavrou" target="_blank">
+            <img src="images/linkedin.svg" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <article class="about-container">
-                <div class="image-gallery">
-                    <img src="images/gallery1.jpg" alt="Gallery Image 1">
-                    <img src="images/gallery2.jpg" alt="Gallery Image 2">
-                    <img src="images/gallery3.jpg" alt="Gallery Image 3">
-                </div>
-                <p>
-                    My name is Theodora Stavrou, I am an 18-year-old Computer Engineering and Informatics student at the Cyprus University of Technology.
-                </p>
-                <p>
-                    Passionate about cybersecurity and game development, I strive to enhance digital security and create immersive experiences.
-                    I continuously expand my technical knowledge by exploring technologies, experimenting with operating systems like Linux,
-                    and searching into hardware concepts such as Raspberry Pi, to bridge theory with practice.
-                    Committed to continuous learning and innovation, I aim to make a meaningful impact in the ever-evolving tech landscape.
-                </p>
-                <div class="skills-chart">
-                    <div class="skill" data-skill="Cybersecurity">Cybersecurity</div>
-                    <div class="skill" data-skill="Game Development">Game Development</div>
-                    <div class="skill" data-skill="Linux">Linux</div>
-                    <div class="skill" data-skill="Raspberry Pi">Raspberry Pi</div>
-                </div>
-            </article>
-        </section>
+    <!-- About Section -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <p>
+          My name is Theodora Stavrou, I am an 18-year-old Computer Engineering and Informatics student at the Cyprus University of Technology.
+        </p>
+        <p>
+          Passionate about cybersecurity and game development, I strive to enhance digital security and create immersive experiences.
+          I continuously expand my technical knowledge by exploring technologies, experimenting with operating systems like Linux,
+          and exploring hardware concepts such as Raspberry Pi, to bridge theory with practice.
+          Committed to continuous learning and innovation, I aim to make a meaningful impact in the ever-evolving tech landscape.
+        </p>
+      </div>
+    </section>
 
-        <section id="workshops">
-            <h2>Workshops</h2>
-            <article class="workshop">
-                <div class="workshop-content">
-                    <div class="workshop-front">
-                        <h3>Fake News</h3>
-                        <p>Attending this workshop gave me valuable insights...</p>
-                    </div>
-                    <div class="workshop-back">
-                        <p>More details about the Fake News workshop...</p>
-                    </div>
-                </div>
-            </article>
+    <!-- Workshops Section -->
+    <section id="workshops" class="card">
+      <h2>Workshops</h2>
 
-            <article class="workshop">
-                <div class="workshop-content">
-                    <div class="workshop-front">
-                        <h3>Media enterprising in the digital age</h3>
-                        <p>This workshop explored how media serves as a substitute...</p>
-                    </div>
-                    <div class="workshop-back">
-                        <p>More details about the media enterprising workshop...</p>
-                    </div>
-                </div>
-            </article>
-             <article class="workshop">
-                <div class="workshop-content">
-                    <div class="workshop-front">
-                        <h3>EYP</h3>
-                        <p>As an alumni, I have attended several workshops...</p>
-                    </div>
-                    <div class="workshop-back">
-                        <p>More details about the EYP workshop...</p>
-                    </div>
-                </div>
-            </article>
-        </section>
+      <div class="workshop">
+        <h3>Fake News</h3>
+        <p>
+          Attending this workshop gave me valuable insights into the spread of misinformation in the digital age.
+          I learned how to critically analyze sources, identify misleading content, and verify information using fact-checking tools.
+          The session emphasized the importance of media literacy and responsible content consumption.
+        </p>
+      </div>
 
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <article class="project" data-project="EYP Alumni">
-                <h3>EYP Alumni</h3>
-                <p>I took part in the 17th National Session of the Cyprus European Youth Parliament as a delegate in the summer of 2023.</p>
-            </article>
+      <div class="workshop">
+        <h3>Media Enterprising in the Digital Age</h3>
+        <p>
+          This workshop explored how media serves as a substitute for reality in the digital era and how creative professionals can leverage social media for success.
+          It introduced powerful Adobe software tools like Photoshop, After Effects, and Premiere, highlighting their role in content creation and digital career development.
+          As a participant, I gained insights into utilizing these applications to enhance digital presence and entrepreneurial opportunities.
+        </p>
+      </div>
 
-            <article class="project" data-project="IELTS">
-                <h3>IELTS</h3>
-                <p>In March of 2024 I took the Academic IELTS examination with an overall band score of 7.5.</p>
-            </article>
+      <div class="workshop">
+        <h3>EYP</h3>
+        <p>
+          As an alumni, I have attended several workshops presented by the European Youth Parliament.
+          I have honed soft skills such as time management, problem solving, and teamwork that benefit both my academic and professional life.
+        </p>
+      </div>
+    </section>
 
-            <article class="project" data-project="IGCSE">
-                <h3>IGCSE</h3>
-                <p>In June of 2022 I took the IGCSE examination with an A* Grade.</p>
-            </article>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="card">
+      <h2>Portfolio</h2>
+      <div class="project">
+        <h3>EYP Alumni</h3>
+        <p>
+          I took part in the 17th National Session of the Cyprus European Youth Parliament as a delegate in the summer of 2023.
+        </p>
+      </div>
 
-            <article class="project" data-project="ECDL">
-                <h3>ECDL</h3>
-                <p>I have an ECDL Standard Certificate by completing the following modules:<br />1. Online Collaboration (04.02.2017)<br />2. Word Processing (27.05.2017)<br />3. Presentations (03.02.2018)<br />4. Spreadsheets (26.05.2018)<br />5. Online Essentials (26.01.2019)<br />6. Using Databases (25.05.2019)<br />7. Computer Essentials (01.02.2020)</p>
-            </article>
-        </section>
+      <div class="project">
+        <h3>IELTS</h3>
+        <p>
+          In March of 2024 I took the Academic IELTS examination with an overall band score of 7.5.
+        </p>
+      </div>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form id="contactForm" action="https://formspree.io/f/xyzkrpzz" method="POST">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
+      <div class="project">
+        <h3>IGCSE</h3>
+        <p>
+          In June of 2022 I took the IGCSE examination with an A* Grade.
+        </p>
+      </div>
 
-    <footer>
-        <p>&copy; 2025 Theodora Stavrou - E-Profile</p>
-    </footer>
+      <div class="project">
+        <h3>ECDL</h3>
+        <p>
+          I have an ECDL Standard Certificate by completing the following modules:
+          <br>
+          1. Online Collaboration (04.02.2017)<br>
+          2. Word Processing (27.05.2017)<br>
+          3. Presentations (03.02.2018)<br>
+          4. Spreadsheets (26.05.2018)<br>
+          5. Online Essentials (26.01.2019)<br>
+          6. Using Databases (25.05.2019)<br>
+          7. Computer Essentials (01.02.2020)
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <form id="contactForm" action="https://formspree.io/f/xyzkrpzz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Theodora Stavrou</p>
+  </footer>
 </body>
 </html>
