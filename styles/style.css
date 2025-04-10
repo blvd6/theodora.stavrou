@@ -1,4 +1,4 @@
-/* Reset and Base */
+/* Reset and Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #181818; /* Dark, neutral background */
+  background-color: #2a2a2a; /* Lighter dark background for improved contrast */
   color: #f0f0f0;
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #70060e;  /* Warm accent */
+  background-color: #03174d; /* Updated header color */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -62,13 +62,13 @@ main {
   padding: 40px 20px;
 }
 
-/* Card Style Sections */
+/* Card-Style Sections */
 .card {
   background: #242424;
   padding: 30px;
   margin-bottom: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease-out;
@@ -137,7 +137,7 @@ section h2 {
   margin-bottom: 10px;
 }
 
-/* CV Download Button */
+/* Resume Download Button */
 .cv-download {
   text-align: center;
   margin-top: 20px;
@@ -146,7 +146,7 @@ section h2 {
 .cv-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #70060e;
+  background-color: #03174d;
   color: #f0f0f0;
   text-decoration: none;
   border-radius: 4px;
@@ -154,7 +154,7 @@ section h2 {
 }
 
 .cv-btn:hover {
-  background-color: #a00716;
+  background-color: #1a2e5a;
 }
 
 /* Form Styles */
@@ -176,30 +176,30 @@ button {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #70060e;
+  background-color: #03174d;
   color: #f0f0f0;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #a00716;
+  background-color: #1a2e5a;
 }
 
 /* Footer */
 footer {
-  background: #70060e;
+  background: #03174d;
   text-align: center;
   padding: 15px;
 }
 
-/* Responsive Navigation */
+/* Responsive Navigation for Mobile */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
     top: 60px;
     right: 0;
-    background: #70060e;
+    background: #03174d;
     flex-direction: column;
     width: 200px;
     text-align: center;
