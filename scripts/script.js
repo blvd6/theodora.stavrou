@@ -1,4 +1,4 @@
-// Smooth scroll for navigation links
+// Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -21,7 +21,7 @@ const revealOnScroll = () => {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-// Toggle mobile navigation
+// Toggle mobile (hamburger) navigation
 document.querySelector('.hamburger').addEventListener('click', () => {
   document.querySelector('.nav-links').classList.toggle('active');
 });
