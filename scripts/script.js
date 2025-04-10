@@ -1,54 +1,27 @@
+// Smooth scroll for navigation links
 document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-    });
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
 });
 
-const sections = document.querySelectorAll('section');
+// Reveal sections on scroll
+const sections = document.querySelectorAll('section.card');
 const revealOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(section => {
-        if (section.getBoundingClientRect().top < triggerBottom) {
-            section.classList.add('visible');
-        }
-    });
+  const triggerPoint = window.innerHeight * 0.85;
+  sections.forEach(section => {
+    if (section.getBoundingClientRect().top < triggerPoint) {
+      section.classList.add('visible');
+    }
+  });
 };
 
-function debounce(func, wait = 20, immediate = true) {
-    let timeout;
-    return function() {
-        let context = this, args = arguments;
-        let later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        let callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 
-window.addEventListener('scroll', debounce(revealOnScroll));
-revealOnScroll();
-
-document.querySelector('.hamburger').onclick = () => {
-    document.querySelector('.nav-links').classList.toggle('active');
-};
-
-// Skills Chart Interaction
-document.querySelectorAll('.skill').forEach(skill => {
-    skill.addEventListener('mouseover', () => {
-        const skillName = skill.getAttribute('data-skill');
-        alert(`Information about ${skillName} skill goes here!`); // Replace with actual information display
-    });
-});
-
-// Portfolio Modal (Example)
-document.querySelectorAll('.project').forEach(project => {
-    project.addEventListener('click', () => {
-        const projectName = project.getAttribute('data-project');
-        alert(`More details about ${projectName} project!`); // Replace with a modal display
-    });
+// Toggle mobile navigation
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('active');
 });
