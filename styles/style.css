@@ -1,4 +1,4 @@
-/* General Styles */
+/* Reset and Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: #020433;
-  color: #fff;
+  background-color: #181818; /* Dark, neutral background */
+  color: #f0f0f0;
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
 }
@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #70060e;
+  background-color: #70060e;  /* Warm accent */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -40,7 +40,7 @@ nav {
 }
 
 .nav-links li a {
-  color: #fff;
+  color: #f0f0f0;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -55,19 +55,20 @@ nav {
   cursor: pointer;
 }
 
-/* Card Containers for Sections */
+/* Main Content */
 main {
   max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
 }
 
+/* Card Style Sections */
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #242424;
   padding: 30px;
   margin-bottom: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease-out;
@@ -109,7 +110,7 @@ main {
   transform: scale(1.1);
 }
 
-/* About, Workshops, Portfolio, & Contact */
+/* Section Titles */
 section h2 {
   text-align: center;
   font-size: 32px;
@@ -117,13 +118,43 @@ section h2 {
   font-weight: 600;
 }
 
+/* Generic Content Containers */
 .about-container,
 .workshop,
-.project {
+.project,
+.cv-container {
   margin: 15px 0;
   padding: 15px;
-  background: rgba(255,255,255,0.04);
+  background: #2d2d2d;
   border-radius: 4px;
+}
+
+.cv-container .cv-section {
+  margin-bottom: 20px;
+}
+
+.cv-container .cv-section h3 {
+  margin-bottom: 10px;
+}
+
+/* CV Download Button */
+.cv-download {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cv-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #70060e;
+  color: #f0f0f0;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: #a00716;
 }
 
 /* Form Styles */
@@ -146,7 +177,7 @@ button {
   border: none;
   border-radius: 4px;
   background-color: #70060e;
-  color: #fff;
+  color: #f0f0f0;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -176,13 +207,11 @@ footer {
     border-radius: 4px;
     overflow: hidden;
   }
-
   .nav-links.active {
     display: flex;
   }
-
   .hamburger {
     display: block;
-    color: #fff;
+    color: #f0f0f0;
   }
 }
